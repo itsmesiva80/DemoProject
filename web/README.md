@@ -1,13 +1,13 @@
 #Web Test Automation
 
-    Test cases are automated using Selenium Webdriver RobotFramework. RobotFramework is choosen
+Test cases are automated using Selenium Webdriver RobotFramework. RobotFramework is choosen
 as it is proven for easy maintance, reporting, logging and implementing. It is a TDD (Test-Driven Development),
 Python and Selenium2Library are used to build the test cases and keywords.
 Test case design is simple view and implementation which consists of higher level of keywords.
 Reporting, execution log and failure screenshots are exciting part in Robotframework.
 To know better of RobotFramework please [click here](http://robotframework.org/robotframework/#user-guide).
 
-###prerequisite
+###Prerequisite
 Following need to be installed before we start executing the test
 - Python 2.7
 - RobotFramework
@@ -47,8 +47,8 @@ Depending on the system configuration, it may also be possible to just double-cl
 Before you download webdrivers from external sources please verify in ' \Python27\Lib\site-packages\selenium\webdriver '
 if geckodriver and chrome driver exist well and good other wise install from below sources:
 
-[geckodriver](https://github.com/mozilla/geckodriver/releases)
-[chromedriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
+- [geckodriver](https://github.com/mozilla/geckodriver/releases)
+- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
 
 Virtualenv is optinal, you can download from [site](https://pypi.python.org/pypi/virtualenv).
 
@@ -88,10 +88,14 @@ Execution of tests
 ```
 cd /path/to/your/test/
 robot test.robot
-
+d
 ```
 Find reports at the same path your test is located. Robot Framework will create temprary files in test location
 following files can be found there:
 - report.html high level report with test cases status and number of test cases executed and its status are shown.
 - log.html is the detailed report of each test case execution, steps and data used in the test cases are shown. Can also be navigate from report.html
 - output.xml is XML format of the entire test, log and report.
+
+######Test location
+
+All tests and reports are located under src folder 'StoreCast\web\src' .
