@@ -102,6 +102,9 @@ All tests and reports are located under src folder 'StoreCast\web\src' .
 
 ##Running from Docker
 
+Dockerised build and execution is more simpler as installation of all prequisite will be handeled by dockerfile.
+Make sure you have [Docker](https://docs.docker.com/engine/installation/) installed.
+
 Build from source
 
 ```
