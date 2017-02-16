@@ -1,11 +1,11 @@
 #Web Test Automation
 
-Test cases are automated using Selenium Webdriver RobotFramework. RobotFramework is choosen
-as it is proven for easy maintance, reporting, logging and implementing. It is a TDD (Test-Driven Development),
+Test cases are automated using Selenium Webdriver Robot Framework. Robot is choosen
+as it is proven for easy maintance, reporting, logging and implementing. It is a TDD (Test-Driven Development) approach,
 Python and Selenium2Library are used to build the test cases and keywords.
-Test case design is simple view and implementation which consists of higher level of keywords.
+Test case design is simple user understanadable and implementation which consists of higher level of keywords.
 Reporting, execution log and failure screenshots are exciting part in Robotframework.
-To know better of RobotFramework please [click here](http://robotframework.org/robotframework/#user-guide).
+To know better of Robot Framework please [click here](http://robotframework.org/robotframework/#user-guide).
 
 ###Prerequisite
 Following need to be installed before we start executing the test:
@@ -98,7 +98,9 @@ following files can be found there:
 
 ###Test location
 
-All tests and reports are located under src folder 'StoreCast\web\src' .
+All tests and reports are located
+- Tests: `DemoProject\Web\test.robot>`
+- Reports `DemoProject\Web\log.html`
 
 ##Running from Docker
 
