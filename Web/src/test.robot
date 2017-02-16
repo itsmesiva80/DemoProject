@@ -27,12 +27,25 @@ Register New User
 Film Section
     Verify Film Highlights
 
-Buy Movie
+Buy Film
     Select Movie
     Verify Movie Details
     Checkout Movie
     Verify Paypal Page
 
+Search Film
+    Open Home Page
+    Verify Title
+    Input Film Name In Search Box
+
+Search Results For Albums
+    Verify Atleast One Item For Albums Is Listed
+
+Search Results For Films
+    Verify Atleast One Item For Films Is Listed
+
+Search Results For Songs
+    Verify Atleast One Item For Songs Is Listed
 
 *** Keywords ***
 Open Home Page
@@ -95,4 +108,23 @@ Verify Paypal Page
     Page Should Contain      Juke Entertainment GmbH
     Page Should Contain      Bei PayPal einloggen
     Page Should Contain Element    css=a[id=cancelLink]
+    Close Browser
+
+Input Film Name In Search Box
+    Input Text     css = input[id=searchfield]   ninja turtles
+    Click Button   css = button[id=searchbutton]
+    Set Browser Implicit Wait  10
+    Page Should Contain     Suchergebnisse für “ninja turtles”
+
+Verify Atleast One Item For Albums Is Listed
+    ${Albums_Count} =   Get Matching Xpath Count    //*[@ng-switch-when='albums']/react-component[@name='marqueeComponent']//div[@class="marquee-items-container"]/div[@class='marquee-items']
+    Should be True    ${Albums_Count} > 0
+
+Verify Atleast One Item For Films Is Listed
+    ${Albums_Count} =   Get Matching Xpath Count    //*[@ng-switch-when='videos']/react-component[@name='marqueeComponent']//div[@class="marquee-items-container"]/div[@class='marquee-items']
+    Should be True    ${Albums_Count} > 0
+
+Verify Atleast One Item For Songs Is Listed
+    ${Count} =    Get Matching Xpath Count    //*[@ng-switch-when='tracks']/react-component[@name='marqueeComponent']//div[@class="marquee-items-container"]/div[@class='marquee-items']
+    Should be True    ${Count} > 0
     Close Browser
