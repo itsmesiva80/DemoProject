@@ -99,3 +99,20 @@ following files can be found there:
 ###Test location
 
 All tests and reports are located under src folder 'StoreCast\web\src' .
+
+##Running from Docker
+
+Build from source
+
+```
+ docker build -t robot_test .
+
+```
+It will take a while to install all the software, once docker image is built, run the below command
+```
+ docker run -v $(pwd)/Web/:/Web/ -e ROBOT_TESTS=/Web/ -e BROWSER=firefox robot_test
+
+```
+Note: Define test case directory in param -v and change path from $(pwd)/Web/test1 to your defined path in your local computer.
+
+check the result on console and to verify the log and report access from where test is resided.
