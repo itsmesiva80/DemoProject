@@ -99,7 +99,7 @@ following files can be found there:
 ###Test location
 
 All tests and reports are located
-- Tests: `DemoProject\Web\test.robot>`
+- Tests: `DemoProject\Web\test.robot`
 - Reports `DemoProject\Web\log.html`
 
 ##Running from Docker
@@ -118,6 +118,8 @@ It will take a while to install all the software, once docker image is built, ru
  docker run -v $(pwd)/Web/:/Web/ -e ROBOT_TESTS=/Web/ -e BROWSER=firefox robot_test
 
 ```
-Note: Define test case directory in param -v and change path from $(pwd)/Web/test1 to your defined path in your local computer.
+*Note:*
+- *Docker setup works better on mac or linux/ubuntu os machines*
+- *Define test case directory in param -v and change path from $(pwd)/Web/test1 to your defined path in your local computer.*
 
 check the result on console and to verify the log and report access from where test is resided.
