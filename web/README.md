@@ -8,7 +8,7 @@ Reporting, execution log and failure screenshots are exciting part in Robotframe
 To know better of RobotFramework please [click here](http://robotframework.org/robotframework/#user-guide).
 
 ###Prerequisite
-Following need to be installed before we start executing the test
+Following need to be installed before we start executing the test:
 - Python 2.7
 - RobotFramework
 - Selenium2Library
@@ -22,27 +22,27 @@ If you already have pip installed, it is enough to run.
 
 But if you dont have python and pip installed, please follow the [guidelines](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst#python-installation) in detail.
 
-######Robot Framework installation
+###Robot Framework installation
 
 ```
 pip install robotframework
 
 ```
 
-######Selenium2Library Installation
+###Selenium2Library Installation
 
 ```
 pip install robotframework-selenium2library
 
 ```
 
-######Jython Installation
+###Jython Installation
 
 Installing Jython is a fairly easy procedure, and the first step is getting an installer from http://jython.org.
 The installer is an executable JAR package, which you can run from the command line like java -jar jython_installer-<version>.jar.
 Depending on the system configuration, it may also be possible to just double-click the installer.
 
-######Webdriver Installation
+###Webdriver Installation
 
 Before you download webdrivers from external sources please verify in ' \Python27\Lib\site-packages\selenium\webdriver '
 if geckodriver and chrome driver exist well and good other wise install from below sources:
@@ -52,7 +52,7 @@ if geckodriver and chrome driver exist well and good other wise install from bel
 
 Virtualenv is optinal, you can download from [site](https://pypi.python.org/pypi/virtualenv).
 
-######Configuring PATH
+###Configuring PATH
 
 This is very important part in robot framework, please set your PATH variables for all above installations,
 otherwise test case execution is not possible and reports are not saved in correct paths.
@@ -72,7 +72,7 @@ On Windows you can configure PATH by following the steps below. Notice that the 
 For example my PATH looks like this:
 `C:\Python27;C:\Python27\Scripts;C:\jython2.7.0\bin;C:\Python27\Lib\site-packages\selenium\webdriver;C:\Python27\Lib\site-packages\selenium\webdriver\geckodriver;`
 
-######Verify Installation
+###Verify Installation
 
 ```
 robot --version
@@ -82,13 +82,13 @@ Robot Framework 3.0 (Python 2.7.10 on linux2)
 
 When You see robot is installed and PATH variables are set, then you are good to go executing/creating tests using Robot Framework.
 
-######Guidlines to run the test and verify reports
+###Guidlines to run the test and verify reports
 
 Execution of tests
 ```
 cd /path/to/your/test/
 robot test.robot
-d
+
 ```
 Find reports at the same path your test is located. Robot Framework will create temprary files in test location
 following files can be found there:
@@ -96,6 +96,6 @@ following files can be found there:
 - log.html is the detailed report of each test case execution, steps and data used in the test cases are shown. Can also be navigate from report.html
 - output.xml is XML format of the entire test, log and report.
 
-######Test location
+###Test location
 
 All tests and reports are located under src folder 'StoreCast\web\src' .
