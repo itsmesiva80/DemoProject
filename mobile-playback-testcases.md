@@ -55,26 +55,36 @@ Feature: Mobile App Audio Plackback Functionality
       And user clicks on Previous on lock screen display control
     Then audio track is changed accordingly without going back to application
 
-    Scenario: Test Display of metadata on playback
-      Given Audio application is playing
-        And application is closed
-      When Audio is playing on closed application
-        And User could see metadata on the mobile lock screen display control
-      Then playback app metadata is same as metadata dispalyed on mobile lock screen display control
+  Scenario: Test Display of metadata on playback
+    Given Audio application is playing
+      And application is closed
+    When audio is playing on closed application
+      And user taps onplayback app of lock screen display control
+    Then prompts for lockscreen
+      And user unlocks the screen
+      And user should fall on playback application
+
+  Scenario: Test open playback from lockscreen
+    Given audio application is playing
+      And application is closed
+      And mobile screen is locked
+    When audio is playing on closed application
+      And user could see metadata on the mobile lock screen display control
+    Then playback app metadata is same as metadata dispalyed on mobile lock screen display control
 
   *suggestion as new feature test case*
   Scenario: Test Repeat track on playback
-    Given Audio application is playing
+    Given audio application is playing
       And application is closed
-    When Audio is playing on closed application
+    When audio is playing on closed application
       And user clicks on repeat on lock screen display control
     Then audio track is repeated without going back to application
 
   *suggestion as new feature test case*
   Scenario: Test Shuffel playlist on playback
-    Given Audio application is playing on some playlist
+    Given audio application is playing on some playlist
       And application is closed
-    When Audio is playing on closed application
+    When audio is playing on closed application
       And user clicks on shuffel on lock screen display control
     Then audio track are shufled without going back to application
       And playlist is not changed   
