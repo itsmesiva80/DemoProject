@@ -69,7 +69,7 @@ Input User Data
     Click Button                    ${BTN_REGISTER}
 
 Verify Successful Registration
-    Set Browser Implicit Wait   30
+    Wait Until Element Is Enabled         ${BTN_REGISTER_CLOSE}     timeout=30
     Wait Until Element Is Visible         ${BTN_REGISTER_CLOSE}
     Page Should Contain                   ${REG_SUCCESS}
     Click Button                          ${BTN_REGISTER_CLOSE}
@@ -79,7 +79,7 @@ Verify Film Highlights
 
 Select Movie
     Click Link                            ${BTN_FILM_HIGHLIGHTS_SHOWALL}
-    Set Browser Implicit Wait   20
+    Wait Until Element Is Enabled         ${ELE_ELEVENTH_FILM}     timeout=30
     Click Element                         ${ELE_ELEVENTH_FILM}
 
 Verify Movie Details
@@ -89,14 +89,14 @@ Verify Movie Details
 
 Checkout Movie
     Click Button                          ${BTN_PRICE}
-    Set Browser Implicit Wait   30
+    Wait Until Element Is Enabled         ${BTN_PURCHASE_START}     timeout=30
     Page Should Contain                   Kauf überprüfen
     Wait Until Element Is Visible         ${BTN_PURCHASE_START}
     Select From List                      ${DPD_PAYMENT_OPTION}   PayPal
     Click Button                          ${BTN_PAYBY_PAYPAL}
 
 Verify Paypal Page
-    Set Browser Implicit Wait   60
+    Wait Until Element Is Enabled         ${LNK_CANCEL_PAYPAL}     timeout=30
     Page Should Contain                   Juke Entertainment GmbH
     Page Should Contain                   Bei PayPal einloggen
     Page Should Contain Element           ${LNK_CANCEL_PAYPAL}
