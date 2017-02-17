@@ -24,33 +24,33 @@ Feature: Mobile App Audio Plackback Functionality
     Given Audio application is playing
       And application is closed
     When Audio is playing on closed application
-      And User pauses the application from universal control
-      And User stops the application from universal control
+      And User pauses the application from lock screen display control
+      And User stops the application from lock screen display control
     Then the application playback is paused
       And played when clicking on play
       And closes when clicking on close
 
-  Scenario: Test Next and Previous tracks on playback
+  Scenario: Test Next and Previous tracks on playback 
     Given Audio application is playing
       And application is closed
     When Audio is playing on closed application
-      And user clicks on Next on universal control
-      And user clicks on Previous on universal Control
+      And user clicks on Next on lock screen display control
+      And user clicks on Previous on lock screen display control
     Then audio track is changed accordingly without going back to application
 
     Scenario: Test Display of metadata on playback
       Given Audio application is playing
         And application is closed
       When Audio is playing on closed application
-        And User could see metadata on the mobile universal Control
-      Then playback app metadata is same as metadata dispalyed on mobile universal Control
+        And User could see metadata on the mobile lock screen display control
+      Then playback app metadata is same as metadata dispalyed on mobile lock screen display control
 
   *suggestion as new feature test case*
   Scenario: Test Repeat track on playback
     Given Audio application is playing
       And application is closed
     When Audio is playing on closed application
-      And user clicks on repeat on universal control
+      And user clicks on repeat on lock screen display control
     Then audio track is repeated without going back to application
 
   *suggestion as new feature test case*
@@ -58,7 +58,7 @@ Feature: Mobile App Audio Plackback Functionality
     Given Audio application is playing on some playlist
       And application is closed
     When Audio is playing on closed application
-      And user clicks on shuffel on universal control
+      And user clicks on shuffel on lock screen display control
     Then audio track are shufled without going back to application
       And playlist is not changed   
 
