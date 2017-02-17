@@ -1,5 +1,10 @@
-
 *** Settings ***
+Documentation        Juke Web application automation test cases:
+...                  1. Test suite with new user registration and checkout using Paypal.
+...                  2. Tets suit with search for film and verify results
+...
+...                  This test has a workflow that is created using keywords in
+...                  the imported resource file.
 Resource             resource.robot
 
 
